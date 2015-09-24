@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- AndroidManifest.xml -->
+    <string name="app_name">What I Pay</string>
+    <!-- activity_welcome.xml -->
+    <string name="txt_welcome_say">Welcome...</string>
+    <string name="txt_welcome_develop">Develop by Colin Davis.</string>
+    <!-- activity_daily_payment.xml -->
+    <string name="txt_popup_menu_used_2_use_title">Titles</string>
+    <!-- activity_title.xml -->
+    <string name="title_activity_title">TitleActivity</string>
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="0"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="45"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="90"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="135"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="180"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="225"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+    <item android:duration="50">
+        <shape>
+            <gradient
+                android:angle="315"
+                android:endColor="#57d8bb"
+                android:startColor="#4ac436" />
+        </shape>
+    </item>
+
+</animation-list>

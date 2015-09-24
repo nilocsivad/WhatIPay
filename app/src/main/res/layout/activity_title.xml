@@ -1,0 +1,67 @@
+<LinearLayout
+    android:id="@+id/title_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    tools:context="com.iam.vip.whatipay.ui.DailyPaymentActivity">
+
+    <RelativeLayout
+        android:id="@+id/daily_payment_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sz_h_top_layout"
+        android:background="@color/background_color4top_layout">
+
+        <TextView
+            android:id="@+id/title_tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/top_tv_background"
+            android:drawableLeft="@drawable/icon_back"
+            android:drawableStart="@drawable/icon_back"
+            android:paddingEnd="@dimen/sz_mr_daily_payment_top_tv"
+            android:paddingLeft="@dimen/sz_mr_daily_payment_top_tv_min"
+            android:paddingRight="@dimen/sz_mr_daily_payment_top_tv"
+            android:paddingStart="@dimen/sz_mr_daily_payment_top_tv_min"/>
+
+        <TextView
+            android:id="@+id/title_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/txt_popup_menu_used_2_use_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sz_txt_daily_payment_top_date"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/title_tv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/top_tv_background"
+            android:drawableLeft="@drawable/icon_new"
+            android:drawableStart="@drawable/icon_new"
+            android:paddingEnd="@dimen/sz_mr_daily_payment_top_tv_min"
+            android:paddingLeft="@dimen/sz_mr_daily_payment_top_tv"
+            android:paddingRight="@dimen/sz_mr_daily_payment_top_tv_min"
+            android:paddingStart="@dimen/sz_mr_daily_payment_top_tv"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/title_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- activity_daily_payment.xml -->
+    <color name="background_color4top_layout">#067d9f</color>
+    <color name="background_color4bottom_layout">@color/background_color4top_layout</color>
+
+</resources>
