@@ -11,5 +11,8 @@
     <!-- activity_title.xml -->
     <string name="txt_popup_menu_used_2_use_title">标题库</string>
     <string name="txt_popup_menu_today">今日</string>
+    <string name="txt_popup_menu_new_title">新标题</string>
+    <string name="hint_popup_menu_new_title">输入新标题</string>
+    <string name="txt_popup_menu_save_title">保存</string>
 
 </resources>

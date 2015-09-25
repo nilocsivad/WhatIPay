@@ -5,8 +5,12 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="sz_h_top_layout">50dp</dimen>
-    <dimen name="sz_margin_li_1p2">6dp</dimen>
+    <dimen name="size_dp_1p2">6dp</dimen>
+    <dimen name="size_dp_2p0">10dp</dimen>
+    <dimen name="size_dp_3p0">15dp</dimen>
     <dimen name="sz_h_bottom_layout">45dp</dimen>
+    <dimen name="sz_margin_tv_default">15dp</dimen>
+    <dimen name="sz_margin_tv_default_min">7.5dp</dimen>
 
     <!-- activity_welcome.xml -->
     <dimen name="sz_txt_welcome_say">30sp</dimen>
@@ -15,8 +19,6 @@
     <dimen name="sz_h_daily_payment_item">@dimen/sz_h_top_layout</dimen>
     <dimen name="sz_txt_daily_payment_top_date">25sp</dimen>
     <dimen name="sz_txt_daily_payment_date">20sp</dimen>
-    <dimen name="sz_margin_daily_payment_tv">15dp</dimen>
-    <dimen name="sz_margin_daily_payment_tv_min">7.5dp</dimen>
 
     <!-- li_daily_payment.xml -->
     <dimen name="sz_h_li_daily_payment_root">60dp</dimen>

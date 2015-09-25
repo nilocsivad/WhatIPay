@@ -3,8 +3,6 @@
     android:id="@+id/daily_payment_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:fitsSystemWindows="false"
     android:orientation="vertical"
     tools:context="com.iam.vip.whatipay.ui.DailyPaymentActivity">
 
@@ -21,13 +19,13 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/default_tv_background"
+            android:background="@drawable/background_color_default_tv"
             android:drawableLeft="@drawable/icon_menu"
             android:drawableStart="@drawable/icon_menu"
-            android:paddingEnd="@dimen/sz_margin_daily_payment_tv"
-            android:paddingLeft="@dimen/sz_margin_daily_payment_tv_min"
-            android:paddingRight="@dimen/sz_margin_daily_payment_tv"
-            android:paddingStart="@dimen/sz_margin_daily_payment_tv_min" />
+            android:paddingEnd="@dimen/sz_margin_tv_default"
+            android:paddingLeft="@dimen/sz_margin_tv_default_min"
+            android:paddingRight="@dimen/sz_margin_tv_default"
+            android:paddingStart="@dimen/sz_margin_tv_default_min" />
 
         <TextView
             android:id="@+id/daily_payment_tv_top_date"
@@ -46,13 +44,13 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/default_tv_background"
+            android:background="@drawable/background_color_default_tv"
             android:drawableLeft="@drawable/icon_new"
             android:drawableStart="@drawable/icon_new"
-            android:paddingEnd="@dimen/sz_margin_daily_payment_tv_min"
-            android:paddingLeft="@dimen/sz_margin_daily_payment_tv"
-            android:paddingRight="@dimen/sz_margin_daily_payment_tv_min"
-            android:paddingStart="@dimen/sz_margin_daily_payment_tv" />
+            android:paddingEnd="@dimen/sz_margin_tv_default_min"
+            android:paddingLeft="@dimen/sz_margin_tv_default"
+            android:paddingRight="@dimen/sz_margin_tv_default_min"
+            android:paddingStart="@dimen/sz_margin_tv_default" />
     </RelativeLayout>
 
     <ListView
@@ -73,12 +71,12 @@
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:background="@drawable/default_tv_background"
+            android:background="@drawable/background_color_default_tv"
             android:gravity="center"
-            android:paddingEnd="@dimen/sz_margin_daily_payment_tv"
-            android:paddingLeft="@dimen/sz_margin_daily_payment_tv"
-            android:paddingRight="@dimen/sz_margin_daily_payment_tv"
-            android:paddingStart="@dimen/sz_margin_daily_payment_tv"
+            android:paddingEnd="@dimen/sz_margin_tv_default"
+            android:paddingLeft="@dimen/sz_margin_tv_default"
+            android:paddingRight="@dimen/sz_margin_tv_default"
+            android:paddingStart="@dimen/sz_margin_tv_default"
             android:text="@string/app_name"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sz_txt_daily_payment_date" />
@@ -89,12 +87,12 @@
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:background="@drawable/default_tv_background"
+            android:background="@drawable/background_color_default_tv"
             android:gravity="center"
-            android:paddingEnd="@dimen/sz_margin_daily_payment_tv"
-            android:paddingLeft="@dimen/sz_margin_daily_payment_tv"
-            android:paddingRight="@dimen/sz_margin_daily_payment_tv"
-            android:paddingStart="@dimen/sz_margin_daily_payment_tv"
+            android:paddingEnd="@dimen/sz_margin_tv_default"
+            android:paddingLeft="@dimen/sz_margin_tv_default"
+            android:paddingRight="@dimen/sz_margin_tv_default"
+            android:paddingStart="@dimen/sz_margin_tv_default"
             android:text="@string/app_name"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sz_txt_daily_payment_date" />

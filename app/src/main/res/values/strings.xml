@@ -11,5 +11,9 @@
     <!-- activity_title.xml -->
     <string name="txt_popup_menu_used_2_use_title">Titles</string>
     <string name="txt_popup_menu_today">Today</string>
+    <string name="txt_popup_menu_new_title">New title</string>
+    <string name="hint_popup_menu_new_title">Input a new title</string>
+    <string name="txt_popup_menu_save_title">Submit</string>
+    <string name="title_activity_new_title">NewTitleActivity</string>
 
 </resources>

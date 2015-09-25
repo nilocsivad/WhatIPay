@@ -14,8 +14,8 @@
         android:id="@+id/popup_menu_daily_payment_today"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/menu_popup_item_background"
-        android:padding="10dp"
+        android:background="@drawable/background_color_menu_popup_item"
+        android:padding="@dimen/size_dp_2p0"
         android:text="@string/txt_popup_menu_today"
         android:textColor="@android:color/white"
         android:textSize="20sp"
@@ -27,11 +27,11 @@
         android:background="#dedede" />
 
     <TextView
-        android:id="@+id/popup_menu_daily_payment_used_2_use_title"
+        android:id="@+id/popup_menu_daily_payment_titles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/menu_popup_item_background"
-        android:padding="10dp"
+        android:background="@drawable/background_color_menu_popup_item"
+        android:padding="@dimen/size_dp_2p0"
         android:text="@string/txt_popup_menu_used_2_use_title"
         android:textColor="@android:color/white"
         android:textSize="20sp"

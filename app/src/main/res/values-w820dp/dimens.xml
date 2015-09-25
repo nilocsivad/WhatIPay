@@ -3,8 +3,12 @@
     <dimen name="activity_horizontal_margin">64dp</dimen>
 
     <dimen name="sz_h_top_layout">60dp</dimen>
-    <dimen name="sz_margin_li_1p2">7.2dp</dimen>
+    <dimen name="size_dp_1p2">7.2dp</dimen>
+    <dimen name="size_dp_2p0">12dp</dimen>
+    <dimen name="size_dp_3p0">18dp</dimen>
     <dimen name="sz_h_bottom_layout">54dp</dimen>
+    <dimen name="sz_margin_tv_default">18dp</dimen>
+    <dimen name="sz_margin_tv_default_min">9dp</dimen>
 
     <!-- activity_welcome.xml -->
     <dimen name="sz_txt_welcome_say">40sp</dimen>
@@ -13,8 +17,6 @@
     <dimen name="sz_h_daily_payment_item">@dimen/sz_h_top_layout</dimen>
     <dimen name="sz_txt_daily_payment_top_date">30sp</dimen>
     <dimen name="sz_txt_daily_payment_date">24sp</dimen>
-    <dimen name="sz_margin_daily_payment_tv">18dp</dimen>
-    <dimen name="sz_margin_daily_payment_tv_min">9dp</dimen>
 
     <!-- li_daily_payment.xml -->
     <dimen name="sz_h_li_daily_payment_root">72dp</dimen>
