@@ -42,7 +42,6 @@ public class EntityBase extends HashMap<String, Object> implements C {
         try {
             result = this.getClass().getDeclaredMethod( "get" + key ).invoke( this ).toString();
         } catch ( Exception e ) {
-            e.printStackTrace();
         }
         return result;
     }

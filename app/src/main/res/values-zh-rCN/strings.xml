@@ -7,6 +7,9 @@
     <string name="txt_welcome_say">欢迎...</string>
     <string name="txt_welcome_develop">本软件由 Colin Davis 开发完成.</string>
     <!-- activity_daily_payment.xml -->
+
+    <!-- activity_title.xml -->
     <string name="txt_popup_menu_used_2_use_title">标题库</string>
+    <string name="txt_popup_menu_today">今日</string>
 
 </resources>
