@@ -34,7 +34,7 @@
             android:layout_centerInParent="true"
             android:text="@string/txt_popup_menu_used_2_use_title"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/sz_txt_daily_payment_top_date"
+            android:textSize="@dimen/size_txt_max"
             android:textStyle="bold" />
 
         <TextView

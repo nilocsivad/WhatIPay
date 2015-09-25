@@ -10,7 +10,7 @@
         android:layout_width="@dimen/sz_w_li_daily_payment_tv_type"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textSize="@dimen/sz_txt_li_day_payment_type"/>
+        android:textSize="@dimen/size_txt_normal"/>
 
     <View
         android:layout_width="1dp"

@@ -11,20 +11,20 @@
     <dimen name="sz_h_bottom_layout">45dp</dimen>
     <dimen name="sz_margin_tv_default">15dp</dimen>
     <dimen name="sz_margin_tv_default_min">7.5dp</dimen>
+    <dimen name="size_txt_max">25sp</dimen>
+    <dimen name="size_txt_normal">18sp</dimen>
 
     <!-- activity_welcome.xml -->
     <dimen name="sz_txt_welcome_say">30sp</dimen>
 
     <!-- activity_daily_payment.xml -->
     <dimen name="sz_h_daily_payment_item">@dimen/sz_h_top_layout</dimen>
-    <dimen name="sz_txt_daily_payment_top_date">25sp</dimen>
     <dimen name="sz_txt_daily_payment_date">20sp</dimen>
 
     <!-- li_daily_payment.xml -->
     <dimen name="sz_h_li_daily_payment_root">60dp</dimen>
     <dimen name="sz_mt_li_daily_payment_line">9dp</dimen>
     <dimen name="sz_mb_li_daily_payment_line">@dimen/sz_mt_li_daily_payment_line</dimen>
-    <dimen name="sz_txt_li_day_payment_type">18sp</dimen>
     <dimen name="sz_w_li_daily_payment_tv_type">48dp</dimen>
     <dimen name="sz_h_li_daily_payment_title_time">24dp</dimen>
     <dimen name="sz_h_li_daily_payment_money">18dp</dimen>

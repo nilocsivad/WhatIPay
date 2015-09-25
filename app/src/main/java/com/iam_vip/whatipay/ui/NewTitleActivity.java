@@ -23,6 +23,7 @@ public class NewTitleActivity extends Activity implements C, View.OnClickListene
     private void doInitialComponents() {
 
         this.findViewById( R.id.new_title_tv_back ).setOnClickListener( this );
+        this.findViewById( R.id.new_title_tv_save ).setOnClickListener( this );
     }
 
     /**
@@ -35,6 +36,9 @@ public class NewTitleActivity extends Activity implements C, View.OnClickListene
             case R.id.new_title_tv_back:
                 this.setResult( WHAT_CANCLE );
                 this.finish();
+                break;
+            case R.id.new_title_tv_save:
+
                 break;
         }
     }
