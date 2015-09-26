@@ -1,6 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:id="@+id/title_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,17 +26,17 @@
             android:paddingEnd="@dimen/sz_margin_tv_default"
             android:paddingLeft="@dimen/sz_margin_tv_default_min"
             android:paddingRight="@dimen/sz_margin_tv_default"
-            android:paddingStart="@dimen/sz_margin_tv_default_min" />
+            android:paddingStart="@dimen/sz_margin_tv_default_min"/>
 
         <TextView
             android:id="@+id/title_tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/txt_popup_menu_used_2_use_title"
+            android:text="@string/txt_titles"
             android:textColor="@android:color/white"
             android:textSize="@dimen/size_txt_max"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/title_tv_new"
@@ -50,7 +51,46 @@
             android:paddingEnd="@dimen/sz_margin_tv_default_min"
             android:paddingLeft="@dimen/sz_margin_tv_default"
             android:paddingRight="@dimen/sz_margin_tv_default_min"
-            android:paddingStart="@dimen/sz_margin_tv_default" />
+            android:paddingStart="@dimen/sz_margin_tv_default"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sz_h_li_default"
+        android:paddingEnd="@dimen/size_dp_1p2"
+        android:paddingLeft="@dimen/size_dp_1p2"
+        android:paddingRight="@dimen/size_dp_1p2"
+        android:paddingStart="@dimen/size_dp_1p2">
+
+        <TextView
+            android:id="@+id/li_title_tv_titleID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/li_title_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/sz_margin_tv_default_min"
+            android:paddingStart="@dimen/sz_margin_tv_default_min"
+            android:text="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/li_title_tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/sz_margin_tv_default"
+            android:paddingLeft="@dimen/sz_margin_tv_default"
+            android:paddingRight="@dimen/sz_margin_tv_default"
+            android:paddingStart="@dimen/sz_margin_tv_default"
+            android:text="0"/>
     </RelativeLayout>
 
     <ListView

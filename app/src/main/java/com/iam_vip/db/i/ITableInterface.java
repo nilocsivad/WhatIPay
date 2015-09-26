@@ -12,6 +12,12 @@ import java.util.Set;
  */
 public interface ITableInterface<T> extends C {
 
+    void reconstructTable();
+
+    boolean isUpdate();
+
+    int getVersion();
+
     /**
      * get current operating table name
      * @return table name

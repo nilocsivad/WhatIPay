@@ -11,9 +11,9 @@ public class EntityTitle extends EntityBase {
     public EntityTitle() {
     }
 
-    private Integer titleID;
+    private String titleID;
     private String title;
-    private Integer count; // ** 使用量
+    private Integer count = 0; // ** 使用量
 
     public Integer getCount() {
         return count;
@@ -31,11 +31,16 @@ public class EntityTitle extends EntityBase {
         this.title = title;
     }
 
-    public Integer getTitleID() {
+    public String getTitleID() {
         return titleID;
     }
 
-    public void setTitleID( Integer titleID ) {
+    public void setTitleID( String titleID ) {
         this.titleID = titleID;
+    }
+
+    public EntityTitle( String title ) {
+        this.titleID = "ID" + System.currentTimeMillis();
+        this.title = title;
     }
 }

@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/background_color_menu_popup_item"
         android:padding="@dimen/size_dp_2p0"
-        android:text="@string/txt_popup_menu_used_2_use_title"
+        android:text="@string/txt_titles"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold" />

@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Created by niloc on 2015/9/20.
  */
-public abstract class DefaultTableImplement<T> implements ITableInterface<T> {
+public abstract class DefaultTableImplement< T > implements ITableInterface< T > {
 
     public static final String SQL_VALID_TABLE = "SELECT COUNT(*) FROM sqlite_master WHERE TYPE = 'table' AND NAME = ?";
 
@@ -25,14 +25,15 @@ public abstract class DefaultTableImplement<T> implements ITableInterface<T> {
 
     public static final String SQL_LIST_ALL = "SELECT * FROM ";
 
+    public static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS ";
+
     protected SQLiteDatabase db;
 
     /**
      *
      */
     protected DefaultTableImplement() {
-        if ( db == null )
-            db = SDCardSQLiteDatabase.getInstance().DB();
+        if ( db == null ) db = SDCardSQLiteDatabase.getInstance().DB();
 
         this.validateTable();
     }
@@ -42,10 +43,25 @@ public abstract class DefaultTableImplement<T> implements ITableInterface<T> {
     }
 
     protected Object[] getVals( Object instance ) {
+        return this.getVals( instance, 0 );
+    }
+
+    protected Object[] getVals( Object instance, int start ) {
+        return this.getVals( instance, start, 0 );
+    }
+
+    protected Object[] getVals( Object instance, int start, int end ) {
         try {
-            LinkedHashSet<Object> set = new LinkedHashSet<>();
+            LinkedHashSet< Object > set = new LinkedHashSet<>();
+            int i = 0;
             for ( String key : this.KeyValPair().keySet() ) {
-                set.add( instance.getClass().getDeclaredMethod( this.get( key ) ).invoke( instance ) );
+                if ( i < start ) {
+                } else if ( end < 0 ) {
+                } else if ( end > 0 && i >= end ) {
+                } else {
+                    set.add( instance.getClass().getDeclaredMethod( this.get( key ) ).invoke( instance ) );
+                }
+                i++;
             }
             return set.toArray();
         } catch ( Exception e ) {
@@ -72,7 +88,7 @@ public abstract class DefaultTableImplement<T> implements ITableInterface<T> {
 
     protected Object setFieldsVal( Object instance, Cursor cursor ) {
         try {
-            for ( Map.Entry<String, Class> item : this.KeyValPair().entrySet() )
+            for ( Map.Entry< String, Class > item : this.KeyValPair().entrySet() )
                 this.setVal( cursor, instance, item.getKey(), item.getValue() );
             return instance;
         } catch ( Exception e ) {
@@ -82,15 +98,20 @@ public abstract class DefaultTableImplement<T> implements ITableInterface<T> {
         return null;
     }
 
+    @Override
+    public void reconstructTable() {
+        db.execSQL( SQL_DROP_TABLE + this.getTableName() );
+        db.execSQL( this.getTableDefines() );
+    }
+
     /**
      * check whether exists table
      */
     private void validateTable() {
-        Cursor cursor = this.db.rawQuery( SQL_VALID_TABLE, new String[] { this.getTableName().trim() } );
+        Cursor cursor = db.rawQuery( SQL_VALID_TABLE, new String[] { this.getTableName().trim() } );
         if ( cursor.moveToFirst() ) {
             long count = cursor.getLong( 0 );
-            if ( count == 0 )
-                this.db.execSQL( this.getTableDefines() );
+            if ( count == 0 ) db.execSQL( this.getTableDefines() );
         }
     }
 
@@ -120,7 +141,7 @@ public abstract class DefaultTableImplement<T> implements ITableInterface<T> {
     }
 
     @Override
-    public List<T> selectAll() {
+    public List< T > selectAll() {
         return this.select( "" );
     }
 

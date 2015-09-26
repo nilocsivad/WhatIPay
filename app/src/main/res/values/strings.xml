@@ -3,17 +3,26 @@
 
     <!-- AndroidManifest.xml -->
     <string name="app_name">What I Pay</string>
+
+    <!-- Common -->
+    <string name="txt_titles">Titles</string>
+
     <!-- activity_welcome.xml -->
     <string name="txt_welcome_say">Welcome...</string>
     <string name="txt_welcome_develop">Develop by Colin Davis.</string>
+
     <!-- activity_daily_payment.xml -->
+    <string name="txt_popup_menu_today">Today</string>
 
     <!-- activity_title.xml -->
-    <string name="txt_popup_menu_used_2_use_title">Titles</string>
-    <string name="txt_popup_menu_today">Today</string>
+
+    <!-- activity_new_title.xml -->
     <string name="txt_popup_menu_new_title">New title</string>
     <string name="hint_popup_menu_new_title">Input a new title</string>
     <string name="txt_popup_menu_save_title">Submit</string>
-    <string name="title_activity_new_title">NewTitleActivity</string>
+    <string name="toast_new_title_save_null">The new title can not be null.</string>
+
+    <!-- activity_new_daily_payment.xml -->
+    <string name="txt_popup_menu_new_daily_payment">New Record</string>
 
 </resources>

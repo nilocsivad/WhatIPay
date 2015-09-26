@@ -14,15 +14,30 @@ import java.util.Set;
 /**
  * Created by niloc on 2015/9/23.
  */
-public class TableTitle extends DefaultTableImplement<EntityTitle> {
+public class TableTitle extends DefaultTableImplement< EntityTitle > {
+
+    /** 当前发布是否要更新数据库表结构 **/
+    private static final boolean UPDATE = false;
+    /** 当前数据表结构版本号 **/
+    private static final int VERSION = 2;
 
     public static final String TABLE_NAME = "tbTitle";
-    private static final Map<String, Class> COL_TYPE_PAIR = new LinkedHashMap<>();
+    private static final Map< String, Class > COL_TYPE_PAIR = new LinkedHashMap<>();
 
     static {
-        COL_TYPE_PAIR.put( "titleID", Integer.class );
+        COL_TYPE_PAIR.put( "titleID", String.class );
         COL_TYPE_PAIR.put( "title", String.class );
         COL_TYPE_PAIR.put( "count", Integer.class );
+    }
+
+    @Override
+    public boolean isUpdate() {
+        return UPDATE;
+    }
+
+    @Override
+    public int getVersion() {
+        return VERSION;
     }
 
     /**
@@ -35,12 +50,12 @@ public class TableTitle extends DefaultTableImplement<EntityTitle> {
     }
 
     @Override
-    public Set<String> getColumns() {
+    public Set< String > getColumns() {
         return COL_TYPE_PAIR.keySet();
     }
 
     @Override
-    public Map<String, Class> KeyValPair() {
+    public Map< String, Class > KeyValPair() {
         return COL_TYPE_PAIR;
     }
 
@@ -51,7 +66,7 @@ public class TableTitle extends DefaultTableImplement<EntityTitle> {
     public String getTableDefines() {
         return "CREATE TABLE " + TABLE_NAME +
                 "(" +
-                "	titleID INTEGER not null," +
+                "	titleID CHAR(15) not null," +
                 "	title TEXT not null," +
                 "	count INTEGER," +
                 "	primary key (titleID)" +
@@ -81,14 +96,13 @@ public class TableTitle extends DefaultTableImplement<EntityTitle> {
     }
 
     @Override
-    public List<EntityTitle> select( String where ) {
-        List<EntityTitle> list = new ArrayList<EntityTitle>( SIZE );
+    public List< EntityTitle > select( String where ) {
+        List< EntityTitle > list = new ArrayList< EntityTitle >( SIZE );
         Cursor cursor = db.rawQuery( this.sql2Select() + where, null );
         while ( cursor.moveToNext() ) {
             EntityTitle entity = new EntityTitle();
             Object o = this.setFieldsVal( entity, cursor );
-            if ( o != null )
-                list.add( (EntityTitle) o );
+            if ( o != null ) list.add( ( EntityTitle ) o );
         }
         return list;
     }

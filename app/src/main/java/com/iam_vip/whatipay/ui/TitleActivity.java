@@ -24,8 +24,10 @@ public class TitleActivity extends Activity implements C, AdapterView.OnItemClic
     private static final String[] from = { "titleID", "title", "count" };
     private static final int[] to = { R.id.li_title_tv_titleID, R.id.li_title_tv_title, R.id.li_title_tv_count };
 
+    private static final int TO_NEW_TITLE = 1000;
+
     private List< EntityTitle > datas = new ArrayList< EntityTitle >();
-    private TableTitle tableTitle = new TableTitle();
+    private final TableTitle tableTitle = new TableTitle();
 
     private ListView listView;
     private EditText etTitle;
@@ -65,7 +67,6 @@ public class TitleActivity extends Activity implements C, AdapterView.OnItemClic
 
     // <do-refresh-listView>
     private void doRefreshData() {
-        AppToast.ShowShort( "do refresh" );
         String where = " ORDER BY count DESC ";
         datas.clear();
         datas.addAll( tableTitle.select( where ) );
@@ -87,14 +88,13 @@ public class TitleActivity extends Activity implements C, AdapterView.OnItemClic
                 this.doRefreshData();
                 break;
             case R.id.title_tv_new:
-                this.startActivityForResult( new Intent( this, NewTitleActivity.class ), WHAT_OK );
+                this.startActivityForResult( new Intent( this, NewTitleActivity.class ), TO_NEW_TITLE );
                 break;
         }
     }
 
     @Override
     protected void onActivityResult( int requestCode, int resultCode, Intent data ) {
-        AppToast.ShowShort( "resultCode = " + resultCode );
         switch ( resultCode ) {
             case WHAT_DONE:
                 this.doRefreshData();

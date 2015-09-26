@@ -39,8 +39,10 @@ public class DailyPaymentActivity extends Activity implements C, OnClickListener
     private static final String[] from = { "type", "title", "time", "money" };
     private static final int[] to = { R.id.li_daily_payment_tv_type, R.id.li_daily_payment_tv_title, R.id.li_daily_payment_tv_time, R.id.li_daily_payment_tv_money };
 
+    private static final int TO_NEW_DAILY_PAYMENT = 1000;
+
     private List< EntityDailyPayment > datas = new ArrayList< EntityDailyPayment >();
-    private TableDailyPayment tableDailyPayment = new TableDailyPayment();
+    private final TableDailyPayment tableDailyPayment = new TableDailyPayment();
 
     private View notifyView;
     private View popupMenuView;
@@ -179,8 +181,7 @@ public class DailyPaymentActivity extends Activity implements C, OnClickListener
                 this.refreshDateData( ( TextView ) v );
                 break;
             case R.id.daily_payment_tv_new:
-                EntityDailyPayment entity = EntityDailyPayment.newInstance();
-                tableDailyPayment.insert( entity );
+                this.startActivityForResult( new Intent( this, NewDailyPaymentActivity.class ), TO_NEW_DAILY_PAYMENT );
                 break;
 
             // ** popup window menu ** //
@@ -191,6 +192,15 @@ public class DailyPaymentActivity extends Activity implements C, OnClickListener
             case R.id.popup_menu_daily_payment_titles: // ** Titles
                 this.startActivity( new Intent( this, TitleActivity.class ) );
                 popupMenuWindow.dismiss();
+                break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult( int requestCode, int resultCode, Intent data ) {
+        switch ( resultCode ) {
+            case WHAT_DONE:
+                this.setDate( new Date() );
                 break;
         }
     }

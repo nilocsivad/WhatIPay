@@ -3,16 +3,26 @@
 
     <!-- AndroidManifest.xml -->
     <string name="app_name">What I Pay</string>
+
+    <!-- Common -->
+    <string name="txt_titles">标题库</string>
+
     <!-- activity_welcome.xml -->
     <string name="txt_welcome_say">欢迎...</string>
     <string name="txt_welcome_develop">本软件由 Colin Davis 开发完成.</string>
+
     <!-- activity_daily_payment.xml -->
+    <string name="txt_popup_menu_today">今日</string>
 
     <!-- activity_title.xml -->
-    <string name="txt_popup_menu_used_2_use_title">标题库</string>
-    <string name="txt_popup_menu_today">今日</string>
+
+    <!-- activity_new_title.xml -->
     <string name="txt_popup_menu_new_title">新标题</string>
     <string name="hint_popup_menu_new_title">输入新标题</string>
     <string name="txt_popup_menu_save_title">保存</string>
+    <string name="toast_new_title_save_null">新标题不能为空!</string>
+
+    <!-- activity_new_daily_payment.xml -->
+    <string name="txt_popup_menu_new_daily_payment">新记录</string>
 
 </resources>

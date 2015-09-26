@@ -16,10 +16,15 @@ import java.util.Set;
 /**
  * Created by niloc on 2015/9/20.
  */
-public class TableDailyPayment extends DefaultTableImplement<EntityDailyPayment> {
+public class TableDailyPayment extends DefaultTableImplement< EntityDailyPayment > {
+
+    /** 当前发布是否要更新数据库表结构 **/
+    private static final boolean UPDATE = false;
+    /** 当前数据表结构版本号 **/
+    private static final int VERSION = 1;
 
     public static final String TABLE_NAME = "tbDailyPayment";
-    private static final Map<String, Class> COL_TYPE_PAIR = new LinkedHashMap<>();
+    private static final Map< String, Class > COL_TYPE_PAIR = new LinkedHashMap<>();
 
     static {
         COL_TYPE_PAIR.put( "typeVal", Integer.class );
@@ -27,6 +32,16 @@ public class TableDailyPayment extends DefaultTableImplement<EntityDailyPayment>
         COL_TYPE_PAIR.put( "time", String.class );
         COL_TYPE_PAIR.put( "money", Double.class );
         COL_TYPE_PAIR.put( "details", String.class );
+    }
+
+    @Override
+    public boolean isUpdate() {
+        return UPDATE;
+    }
+
+    @Override
+    public int getVersion() {
+        return VERSION;
     }
 
     /**
@@ -39,12 +54,12 @@ public class TableDailyPayment extends DefaultTableImplement<EntityDailyPayment>
     }
 
     @Override
-    public Set<String> getColumns() {
+    public Set< String > getColumns() {
         return COL_TYPE_PAIR.keySet();
     }
 
     @Override
-    public Map<String, Class> KeyValPair() {
+    public Map< String, Class > KeyValPair() {
         return COL_TYPE_PAIR;
     }
 
@@ -91,14 +106,13 @@ public class TableDailyPayment extends DefaultTableImplement<EntityDailyPayment>
     }
 
     @Override
-    public List<EntityDailyPayment> select( String where ) {
-        List<EntityDailyPayment> list = new ArrayList<EntityDailyPayment>( SIZE );
+    public List< EntityDailyPayment > select( String where ) {
+        List< EntityDailyPayment > list = new ArrayList< EntityDailyPayment >( SIZE );
         Cursor cursor = db.rawQuery( this.sql2Select() + where, null );
         while ( cursor.moveToNext() ) {
             EntityDailyPayment entity = new EntityDailyPayment();
             Object o = this.setFieldsVal( entity, cursor );
-            if ( o != null )
-                list.add( (EntityDailyPayment) o );
+            if ( o != null ) list.add( ( EntityDailyPayment ) o );
         }
         return list;
     }
