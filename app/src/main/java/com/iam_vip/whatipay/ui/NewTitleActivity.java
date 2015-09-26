@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.iam_vip.c.C;
+import com.iam_vip.util.AppToast;
 import com.iam_vip.whatipay.R;
 
 public class NewTitleActivity extends Activity implements C, View.OnClickListener {
@@ -38,7 +39,7 @@ public class NewTitleActivity extends Activity implements C, View.OnClickListene
                 this.finish();
                 break;
             case R.id.new_title_tv_save:
-
+                AppToast.ShowShort( "do save" );
                 break;
         }
     }

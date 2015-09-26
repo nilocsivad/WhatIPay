@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke
-        android:width="0dp"
-        android:color="#a0a0a0"/>
-    <solid android:color="#7f8fbf"/>
+    <solid android:color="@color/default_btn_normal_color"/>
 </shape>

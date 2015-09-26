@@ -73,7 +73,7 @@
         android:id="@+id/new_title_tv_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_color_style1"
+        android:background="@drawable/background_color_btn_style1"
         android:gravity="center"
         android:padding="@dimen/size_dp_2p0"
         android:text="@string/txt_popup_menu_save_title"
